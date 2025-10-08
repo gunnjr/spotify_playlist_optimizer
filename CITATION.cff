@@ -4,6 +4,7 @@ title: "spotify_playlist_optimizer: Analyze and optimize looped playlist order"
 authors:
   - family-names: Gunn
     given-names: John
+    email: john@jrgunn
 version: "0.1.0"
 date-released: "2025-10-08"
 license: MIT

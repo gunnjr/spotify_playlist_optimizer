@@ -1,0 +1,22 @@
+# Environments & caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local config & artifacts
+.env
+.spotipyoauthcache
+*.csv
+*.png
+*.html
+*.pdf

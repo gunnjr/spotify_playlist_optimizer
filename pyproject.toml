@@ -1,14 +1,30 @@
 [project]
 name = "spotify_playlist_optimizer"
 version = "0.1.0"
-description = "Privacy-first tools to analyze and optimize Spotify playlist order."
-readme = ""
+description = "Privacy-first tools to analyze and optimize Spotify playlist order with visual diagnostics."
+readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
-authors = [{ name = "John Gunn" }]
+authors = [{ name = "John Gunn", email = "john@jrgunn" }]
+keywords = ["spotify", "playlist", "audio features", "optimization", "tsp", "pca", "umap"]
+urls = { "Repository" = "https://github.com/gunnjr/spotify_playlist_optimizer" }
 
-# Dependencies will be filled in later steps
-dependencies = []
+dependencies = [
+    "spotipy>=2.23.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "python-dotenv>=1.0.0",
+    "matplotlib>=3.7.0",
+    "scikit-learn>=1.2.0",
+    "jinja2>=3.1.0"
+    # UMAP is optional; install umap-learn for richer embeddings
+]
+
+[project.optional-dependencies]
+umap = ["umap-learn>=0.5.4"]
+
+[project.scripts]
+spotify-playlist-opt = "src.spotify_playlist_optimizer:main"
 
 [tool.black]
 line-length = 100

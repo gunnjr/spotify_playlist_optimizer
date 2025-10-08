@@ -1,1 +1,9 @@
-# Filled in later (spotipy, pandas, numpy, python-dotenv, etc.)
+spotipy>=2.23.0
+pandas>=2.0.0
+numpy>=1.24.0
+python-dotenv>=1.0.0
+matplotlib>=3.7.0
+scikit-learn>=1.2.0
+jinja2>=3.1.0
+# Optional for richer 2-D maps:
+# umap-learn>=0.5.4
