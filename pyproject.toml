@@ -1,0 +1,18 @@
+[project]
+name = "spotify_playlist_optimizer"
+version = "0.1.0"
+description = "Privacy-first tools to analyze and optimize Spotify playlist order."
+readme = ""
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{ name = "John Gunn" }]
+
+# Dependencies will be filled in later steps
+dependencies = []
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","UP"]

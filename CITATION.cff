@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it.
+title: "spotify_playlist_optimizer: Analyze and optimize looped playlist order"
+authors:
+  - family-names: Gunn
+    given-names: John
+version: "0.1.0"
+date-released: "2025-10-08"
+license: MIT
+repository-code: "https://github.com/yourname/spotify_playlist_optimizer"
