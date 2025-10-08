@@ -18,7 +18,7 @@ code, pre { background: #f6f8fa; padding: 2px 4px; border-radius: 4px; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border-bottom: 1px solid #ddd; padding: 6px 8px; text-align: left; }
 img { max-width: 100%; height: auto; border: 1px solid #eee; border-radius: 4px; }
-.note { color: #666; font-size: 0.9em; }
+.note { color: #555; font-size: 0.9em; font-style: italic; }
 </style>
 </head>
 <body>
@@ -31,11 +31,19 @@ img { max-width: 100%; height: auto; border: 1px solid #eee; border-radius: 4px;
 
 <div class="section">
   <h2>Similarity Heatmap</h2>
+  <p class="note">
+    Each cell shows how smoothly one track transitions to another (0 = poor fit, 1 = very smooth).
+    Clusters of bright color along the diagonal suggest coherent sections or moods.
+  </p>
   {% if heatmap_path %}<img src="{{ heatmap_path }}" alt="Similarity heatmap"/>{% else %}<p class="note">No heatmap available.</p>{% endif %}
 </div>
 
 <div class="section">
   <h2>2-D Embedding Maps</h2>
+  <p class="note">
+    Songs are positioned by their overall similarity across multiple features (tempo, key/mode, energy, valence, etc.).
+    Nearby dots represent similar songs — clusters correspond to consistent moods or tempos.
+  </p>
   <div>
     {% if pca_path %}<p><strong>PCA:</strong></p><img src="{{ pca_path }}" alt="PCA map"/>{% else %}<p class="note">No PCA map.</p>{% endif %}
   </div>
@@ -46,6 +54,10 @@ img { max-width: 100%; height: auto; border: 1px solid #eee; border-radius: 4px;
 
 <div class="section">
   <h2>Neighbor & Weakest-Pair Tables</h2>
+  <p class="note">
+    “Top-k neighbors” lists each track’s closest matches (smooth transitions). 
+    “Weakest pairs” highlights the least smooth transitions — candidates for reordering or separation.
+  </p>
   <ul>
     <li>Top-k neighbors CSV: <code>{{ topk_csv }}</code></li>
     <li>Weakest pairs CSV: <code>{{ weakest_csv }}</code></li>

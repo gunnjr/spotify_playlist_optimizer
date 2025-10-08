@@ -20,3 +20,10 @@ Thumbs.db
 *.png
 *.html
 *.pdf
+
+# Python virtual environments
+.venv/
+
+# Output folder, but keep .gitkeep  
+/output/*
+!/output/.gitkeep
