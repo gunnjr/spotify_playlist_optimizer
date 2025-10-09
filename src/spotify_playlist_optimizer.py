@@ -124,7 +124,7 @@ def build_spotify_client(write_back: bool, client_id: Optional[str], redirect_ur
         raise SystemExit("spotipy not installed. Install requirements or use --demo mode.")
     load_dotenv()
     env_client = os.getenv("SPOTIPY_CLIENT_ID")
-    env_redirect = os.getenv("SPOTIPY_REDIRECT_URI", "http://localhost:8080/callback")
+    env_redirect = os.getenv("SPOTIPY_REDIRECT_URI", "http://127.0.0.1:8080/callback")
     cid = client_id or env_client
     ruri = redirect_uri or env_redirect
     if not cid:

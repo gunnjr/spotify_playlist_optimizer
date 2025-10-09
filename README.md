@@ -18,17 +18,18 @@ pip install -r requirements.txt
 Create a Spotify app (no secret needed, PKCE flow):
 
 - <https://developer.spotify.com/dashboard> → create app
-- Add redirect URI: `http://localhost:8080/callback`
+- Add redirect URI: `http://127.0.0.1:8080/callback`
 - Copy **Client ID**
 
 Put credentials in `.env` (or pass via CLI in the next step):
 
 ```bash
 SPOTIPY_CLIENT_ID="your_client_id"
-SPOTIPY_REDIRECT_URI="http://localhost:8080/callback"
+SPOTIPY_CLIENT_SECRET="your_cleint_secret"
+SPOTIPY_REDIRECT_URI="http://127.0.0.1:8080/callback"
 ```
 
-## 🧪 Core commands (preview of v0.1.0 features)
+## Core commands (preview of v0.1.0 features)
 
 - `--dry-run` – analyze & visualize only (no reordering)
 - `--out ordered.csv` – export optimized loop order
