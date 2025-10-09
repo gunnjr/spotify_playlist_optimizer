@@ -21,9 +21,13 @@ Thumbs.db
 *.html
 *.pdf
 
+# temp scripts and scratch directory
+tmp*.sh
+scratch/
+
 # Python virtual environments
 .venv/
 
-# Output folder, but keep .gitkeep  
+# Kepp output folder, but not its contents  
 /output/*
 !/output/.gitkeep
